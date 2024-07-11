@@ -8,9 +8,9 @@ import Aside from './Component/Aside'
 
 const App = () => {
   return (
-    <div>
+    <div className='w-[100vw]'>
       <Header/>
-     <div>
+     <div className='md:flex w-[100vw] md:gap-10 md:pt-10 md:px-10'>
      <Main/>
      <Aside/>
 

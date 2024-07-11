@@ -12,7 +12,7 @@ import 'swiper/css/scrollbar';
 
 const Main = () => {
   return (
-    <div>
+    <div className='md:w-[45%]'>
           <Swiper
      modules={[Navigation, Pagination, Scrollbar, A11y]}
      spaceBetween={50}
