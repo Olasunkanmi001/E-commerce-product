@@ -2,8 +2,13 @@ import React from 'react'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsCart2 } from "react-icons/bs";
 import image1 from "./images/image-avatar.png"
-
+import { useState } from 'react';
+import { useContext } from 'react';
+import { countContext } from '../App';
 const Header = () => {
+
+  const count = useContext(countContext)
+console.log(count)
     let menu = [{"name": "Collection"}, {"name": "Men"},{"name": "Woman"}, {"name": "About"},{"name": "Contact"} ]
   return (
     <div className='flex justify-around pt-7 gap-16 h-[100px] '>
@@ -21,7 +26,10 @@ const Header = () => {
        
 
         <div className='flex gap-5'>
-        <BsCart2 className='text-[#6D7174] w-6 h-6'/>
+      <div className='flex'>
+      <button className=' w-6 h-6'> <BsCart2 className='text-[#6D7174] w-6 h-6'/></button>
+      <span className='rounded-full bg-[#F1863B] h-5 w-5 flex justify-center '>{count.Change}</span>
+      </div>
         <img className='w-7 h-7' src={image1}/>
         </div>
 
